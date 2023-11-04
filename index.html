@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
-  <title>To Do</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>To Do</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- font google -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/main.css">
@@ -17,26 +21,69 @@
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-  </header>
-  <main>
 
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    <div class="card">
+        <!-- header with image -->
+        <div class="card__header">
+            <img src="./img/X2oObC4.png" alt="Tasks">
+        </div>
+        <!-- body -->
+        <div class="card__body">
+            <!-- button filter -->
+            <div class="filter-btn">
+                <a href="#" id="">
+                    <i class="fa fa-check-circle"></i>
+                </a>
+                <a href="#" id="sortAlphaDown">
+                    <i class="fa fa-sort-alpha-down"></i>
+                </a>
+                <a href="#" id="sortAlphaUp">
+                    <i class="fa fa-sort-alpha-up"></i>
+                </a>
+                <a href="#" id="sortByTime">
+                    <i class="fa fa-clock"></i>
+                </a>
+                <span class="toggle-btn">
+                    <i class="fa fa-filter"></i>
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+            <!-- form add task -->
+            <div class="card__content">
+                <div class="card__title">
+                    <h2>My Tasks</h2>
+                    <p id="dates"></p>
+                </div>
+                <div class="card__add">
+                    <form class="card__form" onkeydown="return event.key != 'Enter';">
+                        <input type="text" placeholder="Enter an activity..." id="newTask">
+                        <button id="addItem" type="button">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="card__todo">
+                    <!-- Uncomplete Tasks -->
+                    <ul class="todo" id="uncompleted"></ul>
+                    <!-- Complete Tasks -->
+                    <ul class="todo" id="completed"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <!-- Main js -->
-  <script src="./js/main.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <!-- Main js -->
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
